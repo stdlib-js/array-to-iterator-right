@@ -101,9 +101,9 @@ v = it.next().value;
 
 The invoked function is provided three arguments:
 
--   `value`: iterated value
--   `index`: iterated value index
--   `src`: source array-like object
+-   **value**: iterated value.
+-   **index**: iterated value index.
+-   **src**: source array-like object.
 
 ```javascript
 function fcn( v, i ) {
@@ -167,6 +167,7 @@ var count = ctx.count;
 -   If provided a generic `array`, the returned iterator does **not** ignore holes. To achieve greater performance for sparse arrays, use [`@stdlib/array/to-sparse-iterator-right`][@stdlib/array/to-sparse-iterator-right].
 -   A returned iterator does **not** copy a provided array-like `object`. To ensure iterable reproducibility, copy a provided array-like `object` **before** creating an iterator. Otherwise, any changes to the contents of an array-like `object` will be reflected in the returned iterator.
 -   In environments supporting `Symbol.iterator`, the function **explicitly** does **not** invoke an array's `@@iterator` method, regardless of whether this method is defined. To convert an array to an implementation defined iterator, invoke this method directly.
+-   The returned iterator supports array-like objects having getter and setter accessors for array element access (e.g., [`@stdlib/array/complex64`][@stdlib/array/complex64]).
 
 </section>
 
@@ -296,6 +297,8 @@ Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/array-to-iterator-right/main/LICENSE
 
 [@stdlib/array/to-sparse-iterator-right]: https://github.com/stdlib-js/array-to-sparse-iterator-right
+
+[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64
 
 <!-- <related-links> -->
 
