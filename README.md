@@ -34,32 +34,30 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/array-to-iterator-right
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-array2iteratorRight = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-iterator-right@umd/bundle.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-to-iterator-right@umd/bundle.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.array2iteratorRight;
-})();
-</script>
+var array2iteratorRight = require( '@stdlib/array-to-iterator-right' );
 ```
 
 #### array2iteratorRight( src\[, mapFcn\[, thisArg]] )
@@ -191,16 +189,11 @@ var count = ctx.count;
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@umd/bundle.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-inmap@umd/bundle.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@umd/bundle.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-to-iterator-right@umd/bundle.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var Float64Array = require( '@stdlib/array-float64' );
+var inmap = require( '@stdlib/utils-inmap' );
+var randu = require( '@stdlib/random-base-randu' );
+var array2iteratorRight = require( '@stdlib/array-to-iterator-right' );
 
 function scale( v, i ) {
     return v * (i+1);
@@ -221,11 +214,6 @@ while ( true ) {
     }
     console.log( v.value );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -324,15 +312,15 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/array-to-iterator-right/main/LICENSE
 
-[@stdlib/array/to-sparse-iterator-right]: https://github.com/stdlib-js/array-to-sparse-iterator-right/tree/umd
+[@stdlib/array/to-sparse-iterator-right]: https://github.com/stdlib-js/array-to-sparse-iterator-right
 
-[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64/tree/umd
+[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64
 
 <!-- <related-links> -->
 
-[@stdlib/array/from-iterator]: https://github.com/stdlib-js/array-from-iterator/tree/umd
+[@stdlib/array/from-iterator]: https://github.com/stdlib-js/array-from-iterator
 
-[@stdlib/array/to-iterator]: https://github.com/stdlib-js/array-to-iterator/tree/umd
+[@stdlib/array/to-iterator]: https://github.com/stdlib-js/array-to-iterator
 
 <!-- </related-links> -->
 
