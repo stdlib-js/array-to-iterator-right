@@ -34,38 +34,30 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/array-to-iterator-right
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-array2iteratorRight = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-iterator-right@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var array2iteratorRight = require( 'path/to/vendor/umd/array-to-iterator-right/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-to-iterator-right@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.array2iteratorRight;
-})();
-</script>
+var array2iteratorRight = require( '@stdlib/array-to-iterator-right' );
 ```
 
 #### array2iteratorRight( src\[, mapFcn\[, thisArg]] )
@@ -180,10 +172,10 @@ var count = ctx.count;
 ## Notes
 
 -   If an environment supports `Symbol.iterator`, the returned iterator is iterable.
--   If provided a generic `array`, the returned iterator does **not** ignore holes. To achieve greater performance for sparse arrays, use [`@stdlib/array/to-sparse-iterator-right`][@stdlib/array/to-sparse-iterator-right].
+-   If provided a generic `array`, the returned iterator does **not** ignore holes. To achieve greater performance for sparse arrays, use [`@stdlib/array-to-sparse-iterator-right`][@stdlib/array/to-sparse-iterator-right].
 -   A returned iterator does **not** copy a provided array-like `object`. To ensure iterable reproducibility, copy a provided array-like `object` **before** creating an iterator. Otherwise, any changes to the contents of an array-like `object` will be reflected in the returned iterator.
 -   In environments supporting `Symbol.iterator`, the function **explicitly** does **not** invoke an array's `@@iterator` method, regardless of whether this method is defined. To convert an array to an implementation defined iterator, invoke this method directly.
--   The returned iterator supports array-like objects having getter and setter accessors for array element access (e.g., [`@stdlib/array/complex64`][@stdlib/array/complex64]).
+-   The returned iterator supports array-like objects having getter and setter accessors for array element access (e.g., [`@stdlib/array-complex64`][@stdlib/array/complex64]).
 
 </section>
 
@@ -197,16 +189,11 @@ var count = ctx.count;
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-inmap@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-to-iterator-right@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var Float64Array = require( '@stdlib/array-float64' );
+var inmap = require( '@stdlib/utils-inmap' );
+var randu = require( '@stdlib/random-base-randu' );
+var array2iteratorRight = require( '@stdlib/array-to-iterator-right' );
 
 function scale( v, i ) {
     return v * (i+1);
@@ -227,11 +214,6 @@ while ( true ) {
     }
     console.log( v.value );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -254,8 +236,8 @@ while ( true ) {
 
 ## See Also
 
--   <span class="package-name">[`@stdlib/array/from-iterator`][@stdlib/array/from-iterator]</span><span class="delimiter">: </span><span class="description">create (or fill) an array from an iterator.</span>
--   <span class="package-name">[`@stdlib/array/to-iterator`][@stdlib/array/to-iterator]</span><span class="delimiter">: </span><span class="description">create an iterator from an array-like object.</span>
+-   <span class="package-name">[`@stdlib/array-from-iterator`][@stdlib/array/from-iterator]</span><span class="delimiter">: </span><span class="description">create (or fill) an array from an iterator.</span>
+-   <span class="package-name">[`@stdlib/array-to-iterator`][@stdlib/array/to-iterator]</span><span class="delimiter">: </span><span class="description">create an iterator from an array-like object.</span>
 
 </section>
 
@@ -287,7 +269,7 @@ See [LICENSE][stdlib-license].
 
 ## Copyright
 
-Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
+Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 </section>
 
@@ -314,7 +296,7 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 -->
 
 [chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://gitter.im/stdlib-js/stdlib/
+[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
 
 [stdlib]: https://github.com/stdlib-js/stdlib
 
@@ -330,15 +312,15 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/array-to-iterator-right/main/LICENSE
 
-[@stdlib/array/to-sparse-iterator-right]: https://github.com/stdlib-js/array-to-sparse-iterator-right/tree/umd
+[@stdlib/array/to-sparse-iterator-right]: https://github.com/stdlib-js/array-to-sparse-iterator-right
 
-[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64/tree/umd
+[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64
 
 <!-- <related-links> -->
 
-[@stdlib/array/from-iterator]: https://github.com/stdlib-js/array-from-iterator/tree/umd
+[@stdlib/array/from-iterator]: https://github.com/stdlib-js/array-from-iterator
 
-[@stdlib/array/to-iterator]: https://github.com/stdlib-js/array-to-iterator/tree/umd
+[@stdlib/array/to-iterator]: https://github.com/stdlib-js/array-to-iterator
 
 <!-- </related-links> -->
 
