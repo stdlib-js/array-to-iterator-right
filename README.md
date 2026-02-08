@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import array2iteratorRight from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-iterator-right@esm/index.mjs';
+import array2iteratorRight from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-iterator-right@v0.2.3-esm/index.mjs';
 ```
 
 #### array2iteratorRight( src\[, mapFcn\[, thisArg]] )
@@ -193,7 +193,7 @@ var count = ctx.count;
 import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
 import inmap from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-inmap@esm/index.mjs';
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
-import array2iteratorRight from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-iterator-right@esm/index.mjs';
+import array2iteratorRight from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-iterator-right@v0.2.3-esm/index.mjs';
 
 function scale( v, i ) {
     return v * (i+1);
